@@ -1,0 +1,30 @@
+<div class="button">
+    <!-- <form action="/auth" method="post" enctype="multipart/form-data"> -->
+    <a href="/" class="fa fa-facebok btn">Back</a>    
+</div>
+  
+  
+<table id="customers">
+           
+        <tr>
+            <% fields.forEach(function(n){ %>
+            <% if(n.name != 'id' ) { %>    
+            <th><%=n.name%></th>
+            <% } %>
+            <% }) %>  
+        </tr>
+          
+          <%data.forEach(function(n){ %> 
+          <tr>
+            <td><%= n.fullname %></td>
+            <td><%= n.email %></td>
+            <td><%= n.barang1 == null ? 0:n.barang1 %></td>
+            <td><%= n.barang2 == null ? 0:n.barang2 %></td>
+            <td><%= n.barang3 == null ? 0:n.barang3 %></td>
+            <td><%= n.barang5 == null ? 0:n.barang5%></td>
+            <td><%= n.barang6 == null ? 0:n.barang6%></td>
+            <td><%= n.barang9 == null ? 0:n.barang9%></td>
+            <td><%= n.barang10 == null ? 0:n.barang10 %></td>
+          </tr>
+          <% }) %>  
+</table>
